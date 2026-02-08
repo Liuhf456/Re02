@@ -1,56 +1,190 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>康文昌的在线HTML 教学小工具</title>
-    <style>  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 第一次操作</title>
+    <style>
       body {
         margin: 0;
+        height: 100vh;
+        background-color: #eee;
       }
+      /* * {
+        border: 1px solid black;
+      } */
+       .YinYing{
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px; ;
+       }
+      .TanXingHeZi {
+        display: flex;
+      }
+      .Bai {
+        background-color: white; 
+      }
+      .BiLi1 {
+        flex: 1;
+      }
+      .SHU {
+        flex-direction: column;
+      }
+      .BianJu{
+        margin: 8px;
+      }
+      .You-BJ{
+        margin-right: 8px;
+      }
+      .You-BJ30{
+        margin-right: 38px;
+      }
+      .Shang-BJ{
+        margin-top: 8px;
+      }
+      .DaoHang{
+        padding: 5px 20px;
+        border-bottom: 1px solid rgb(190,190,190);
+        font-size: 14px;
+        color: #666 ;
+      }
+      .YeMei{
+        padding: 20px 20px;
+        font-size: 20px;
+        color: #000000 ;
+      }
+::-webkit-scrollbar{
+            width: 1px;
+            background-color: #b16b6b;
+        }
+
+.ZiDongHuanHang {
+  flex: 1;
+  min-width: 0; 
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 5px;
+}
+
+      @media (max-width:911px){
+        .DaoHangYinCang{
+            display: none;
+        }
+        .LieBiao-column{
+            flex-direction: column;
+        }
+        .ShuJu-column{
+            flex-direction: column;
+        }
+        .DingBuYinCang{
+          display:none;
+        }
+      }
+
     </style>
   </head>
-  <body>
-    <div  style="
-      background-color: #F21;
-      text-align: center;
-      padding: 40px;
-    ">
-      <img src='https://i.imgs.ovh/2026/02/01/yW2M1O.jpeg' alt="LHF" width="80px" height="80px";>
+  <body class="TanXingHeZi">
+     <div style="border-right: 2px solid #b16b6b;" class="TanXingHeZi Bai SHU DaoHangYinCang">
+    <!-- 侧边栏 -->
+    <div style="width: 200  px; z-index: 2; 
+        padding: 0px 10px;
+        border-bottom: 1px solid #b16b6b;
+        
+        " class=" Bai ">
+        <!-- 头像喵 -->
+         <div style="padding: 10px; align-items: center;    
+         justify-content: center;   ;" class="TanXingHeZi">
+             <img src="https://i.imgs.ovh/2026/02/05/yoD0w6.jpeg" 
+             width="50px" height="50px" alt="兔酱">
+         <div style="margin-left: 20px; font-size: 25px; ">录播🐰</div>
+            </div></div>
+    <div style="border-bottom: 2px solid #b16b6b;" class="DaoHang"><input type="text"></div>
+        <!-- 导航 -->
+         <div style="overflow: auto "  >
+         <div class="DaoHang">1</div>
+         <div class="DaoHang">2</div>
+         <div class="DaoHang">3</div>
+         <div class="DaoHang">4</div>
+         <div class="DaoHang">5</div>
+         <div class="DaoHang">6</div>
+         <div class="DaoHang">7</div>
+         <div class="DaoHang">8</div>
+         <div class="DaoHang">9</div>
+         <div class="DaoHang">10</div>
+         <div class="DaoHang">11</div>
+         <div class="DaoHang">12</div>
+         <div class="DaoHang">13</div>
+         <div class="DaoHang">14</div>
+         <div class="DaoHang">15</div>
+         <div class="DaoHang">16</div>
+         <div class="DaoHang">17</div>
+         <div class="DaoHang">18</div>
+         <div class="DaoHang">19</div>
+         <div class="DaoHang">20</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         <div class="DaoHang">??</div>
+         </div></div>
+    <!-- 主区域 -->
+    <div class="TanXingHeZi BiLi1 SHU">
+    <!-- 顶部 -->
+    <div style="height: 80px; z-index: 1;" class="Bai YinYing ">
+        <div style="justify-content: flex-end;  " class="TanXingHeZi">
+        <div style="" class="Bai You-BJ30 YeMei"  >1</div>
+        <div style="" class="Bai You-BJ30 YeMei"  >2</div>
+        <div style="" class="Bai You-BJ30 YeMei"  >3</div>
+        <div style="" class="Bai You-BJ30 YeMei"  >4</div>
+        <div style="" class="Bai You-BJ30 YeMei"  >5</div>
+
+
+        </div>
     </div>
-    <div style="
-      max-width: 800px;
-      background-color: #F1F;
-      margin: 30px auto;
-      padding: 20px;
-      line-height:1.7;
-      color:yellow;
-    ">
-      <p>ok，会拼盒子了</p>
-      <p>会alt shift ↑ ↓复制了</p>
-      <p>细心点能看见操作键</p>
-      <p>可惜不知道a href=是啥意思，但是照着打了就能变成超链接</p>
-      <p>中间出了一个问题，就是在"<"img的地方没有">"导致第一个盒子的红底加到了现在文本中</p>
-      <p>就是在height="80px"这里忘记">"给我整懵逼了老久，甚至还文字直接居中了。因为上面的text-align：center</p>
-      <p>知道原理以后在疯狂找问题，然后复制了整条代码，重新操作了一遍，没有问题啊。我急急急急急急</p>
-      <p>然后一个一个地方找问题，真就是一个字一个字母对着找，原来是少了个">".从第一个盒子延续到了第二个盒子.</p>
-      <p>这是重新写了第三遍.也算是认真复习了.虽然还想试试加点其他东西，也知道不可能吃成一个胖子</p>
-      <p>不急，学习下一集在再说。等到已经会玩代码了。再把咱们这黑白照换成彩色的</p>
-      <p>在img中alt=“LHF”，那这个图片被我编辑成了LHF，是以后重复使用的时候可以变成快捷按钮？</p>
-      <p>2026-2-1 15:43:12</p>
-    </div>
-    <div  style="
-      background-color: #F1f1f1;
-      text-align: center;
-      padding: 40px;
-      font-size:22px;
-    ">
-      <p>LHF的第二份作业</p>
-      <a href="https://space.bilibili.com/854410#!/">无情链接</a>
-      <a href="​https://liuhf456.github.io/Re02/one/">ONE页面</a>
-      <a href="​/one.html">ONE页面修改页</a>
-    </div>
+    <!-- 主要区域 -->
+     <div style="overflow: auto; " class="BiLi1 TanXingHeZi ">
+        <!-- 左侧内容栏 -->
+         <div style="flex:9;" class="TanXingHeZi SHU BianJu">
+            <!-- 数据 -->
+             <div class="TanXingHeZi ">
+             <!-- 数据列表 -->
+              <div style="height: 100px;" class="BiLi1 Bai YinYing You-BJ">数据1</div>
+              <div style="height: 100px;" class="BiLi1 Bai YinYing You-BJ">数据2</div>
+              <div style="height: 100px;" class="BiLi1 Bai YinYing You-BJ">数据3</div>
+              <div style="height: 100px;" class="BiLi1 Bai YinYing">数据4</div>
+              </div>
+             <!-- 列表 -->
+              <div class="TanXingHeZi SHU LieBiao-column">
+                <!-- 列表项目 -->
+                 <div style="height: 200px;" class="Bai YinYing Shang-BJ">项目1</div>
+                 <div style="height: 200px;" class="Bai YinYing Shang-BJ">项目2</div>
+                 <div style="height: 200px;" class="Bai YinYing Shang-BJ">项目3</div>
+                 <div style="height: 200px;" class="Bai YinYing Shang-BJ">项目4 必须要在class里面加入这个自动换行，数字或者英文才不会被撑开。 o(╥﹏╥)o，无法理解了。留给以后的我，或者老师能看见。我就去立马吸收一下这个知识点</div>
+                 <div style="height: 200px;" class="Bai YinYing Shang-BJ">项目555假如在这里加一堆5，超过盒子就炸开了55555555555555555555 。乐。但是用deepseek给了我2个查不到的词。给整出来了。所以就脑壳疼。是这里面不应该输入数字还是程序底层逻辑就这样的。还是说再套一个盒子输入数字。</div>
+                 <div style="height: 200px;" class="Bai YinYing Shang-BJ ZiDongHuanHang">项目666666666666666666666666666666666666666666666666666666666666666666666 就这个问题干了我2天，笑死，今天才去看50分钟的大纲树状图</div>
+
+              </div>
+         </div>
+        <!-- 右侧标签栏 -->
+         <div style="flex:1;" class="TanXingHeZi SHU You-BJ Shang-BJ">
+            <!-- 提示 -->
+             <div style="height: 950px;" class="Bai YinYing">或者在这里输入数字或者连串英文。不输入中文。比如aaaaaaaaaaaaa。假如超过了盒子的宽度就会把盒子拉宽。</div>
+             <!-- 消息 -->
+              <div style="height: auto;" class="Bai YinYing Shang-BJ">
+  <div class="ZiDongHuanHang">
+123 111111111111111111111111111111111111111111111111111111
+
+  </div>
+</div>
+              </div>
+         </div>
+     </div>
+  </body>
   </body>
 </html>
-
- 
